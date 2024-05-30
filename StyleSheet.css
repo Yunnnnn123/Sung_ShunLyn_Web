@@ -1,6 +1,7 @@
 body {
     background-color: #FBFAF3;
     font-family:monospace;
+    margin: 0px;
 }
 
 nav {
@@ -20,9 +21,42 @@ nav ul {
     margin-top: 40px;
 }
 
-nav li {
+nav ul li {
     display: inline-block;
     margin-right: 100px;
+}
+
+/* 當滑鼠懸停在About, Story, Gallery時改變背景和文字顏色 */
+nav ul li:hover{
+    color: #51318F;
+    font-weight: bold;
+}
+
+/* 下拉選單樣式 */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* 當鼠標懸停時顯示下拉選單 */
+nav ul li:hover .dropdown-content {
+    display: block;
 }
 
 article{
@@ -58,8 +92,8 @@ article h2{
 
 footer{
     padding: 15px;
-    margin-top: 200px;
     background-color: #51318F;
+    margin-top: 200px;
     font-size: 12px;
     color: #FBFAF3;
 }
@@ -91,3 +125,99 @@ footer li {
 footer a{
     color: #FBFAF3
 }
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    width: 100%;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid-item .overlay {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(204, 125, 177, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.grid-item .web-icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    top: 20px;
+    left: 20px;
+}
+
+.grid-item .enlarge-icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    top: 260px;
+    left: 260px;
+}
+
+/* 當鼠標懸停在圖片上時，顯示覆蓋層和叉叉圖示 */
+.grid-item:hover .overlay {
+    opacity: 1;
+}
+
+.grid-item:hover .web-icon {
+    opacity: 1;
+}
+
+.grid-item:hover .enlarge-icon {
+    opacity: 1;
+}
+
+.modal {
+    display: none; /* 默認隱藏 */
+    position: fixed;
+    z-index: 100; /* 保證在最上層 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(255,255,255,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+/* 模態框內容圖片 */
+.modal-content {
+    margin: auto;
+    margin-top: 5%;
+    display: block;
+    width: 35%;
+}
+
+
