@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sung-Shun-Lyn:Web</title>
+    <link rel="StyleSheet" href="StyleSheet.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><img src="LOGO.png" style="width: 160px; margin-right: 580px;"></li>
+            <li><a href="" style="text-decoration: none;">About</a></li>
+            <li>Story
+                <div class="dropdown-content">
+                    <a href="SungShunlyn_MRS.html">MRS Micro-Work Co., Ltd.</a>
+                    <a href="SungShunlyn_Fem.html">Fembook</a>
+                </div>
+            </li>
+            <li style="margin-right: 250px; color: #51318F; font-weight: bold;">
+                <a href="SungShunlyn_Gallery.html" style="text-decoration: none;">Gallery</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="grid-container" style="margin-top: 150px;">
+        <div class="grid-item">
+            <img src="s_01.png" alt="image 1">
+            <div class="overlay">
+                <a href="https://rx.mc.ntu.edu.tw/alumni/epaper/28/01.html" target="_blank">
+                    <img src="web_icon.png" alt="web" class="web-icon">
+                </a>
+                <img src="enlarge_icon.png" alt="enlarge" class="enlarge-icon">
+            </div>
+        </div>
+        <div class="grid-item">
+            <img src="s_02.png" alt="image 2">
+            <div class="overlay">
+                <a href="https://rx.mc.ntu.edu.tw/alumni/activity/28th/06.html" target="_blank">
+                    <img src="web_icon.png" alt="web" class="web-icon">
+                </a>
+                <img src="enlarge_icon.png" alt="enlarge" class="enlarge-icon">
+            </div>
+        </div>
+        <div class="grid-item">
+            <img src="s_03.png" alt="image 3">
+            <div class="overlay">
+                <a href="http://wist2021.twist.org.tw/index.php?c=pub&m=loadpage&d=pub&mid=1024" target="_blank">
+                    <img src="web_icon.png" alt="web" class="web-icon">
+                </a>
+                <img src="enlarge_icon.png" alt="enlarge" class="enlarge-icon">
+            </div>
+        </div>
+        <div class="grid-item">
+            <img src="s_04.png" alt="image 4">
+            <div class="overlay">
+                <a href="https://vita.tw/%E5%A5%B3%E6%9B%B8%E8%B4%88%E6%9B%B8-%E6%80%A7%E5%B9%B3%E7%A8%AE%E5%AD%90%E9%81%8D%E5%9C%B0%E9%96%8B%E8%8A%B1/" target="_blank">
+                    <img src="web_icon.png" alt="web" class="web-icon">
+                </a>
+                <img src="enlarge_icon.png" alt="enlarge" class="enlarge-icon">
+            </div>
+        </div>
+        <div class="grid-item">
+            <img src="s_05.png" alt="image 5">
+            <div class="overlay">
+                <a href="https://ge.taichung.gov.tw/gallery/Details.aspx?Parser=16,6,38,,,,,49" target="_blank">
+                    <img src="web_icon.png" alt="web" class="web-icon">
+                </a>
+                <img src="enlarge_icon.png" alt="enlarge" class="enlarge-icon">
+            </div>
+        </div>
+        <div class="grid-item">
+            <img src="s_06.png" alt="image 6">
+            <div class="overlay">
+                <a href="https://www.twist.org.tw/post/%E6%8B%9C%E8%A8%AA%E5%8F%B0%E7%81%A3%E5%A5%B3%E7%89%99%E9%86%AB%E5%B8%AB%E5%AD%B8%E6%9C%83%E6%AE%B5%E8%8C%82%E7%8E%B2%E7%90%86%E4%BA%8B%E9%95%B7twist-twda" target="_blank">
+                    <img src="web_icon.png" alt="web" class="web-icon">
+                </a>
+                <img src="enlarge_icon.png" alt="enlarge" class="enlarge-icon">
+            </div>
+        </div>
+        <div class="grid-item">
+            <img src="s_07.png" alt="image 7">
+            <div class="overlay">
+                <a href="https://market.ltn.com.tw/article/8354" target="_blank">
+                    <img src="web_icon.png" alt="web" class="web-icon">
+                </a>
+                <img src="enlarge_icon.png" alt="enlarge" class="enlarge-icon">
+            </div>
+        </div>
+        <div class="grid-item">
+            <img src="s_08.png" alt="image 8">
+            <div class="overlay">
+                <a href="https://www.ckf.org.tw/news_detail.php?id=308" target="_blank">
+                    <img src="web_icon.png" alt="web" class="web-icon">
+                </a>
+                <img src="enlarge_icon.png" alt="enlarge" class="enlarge-icon">
+            </div>
+        </div>
+        <div class="grid-item">
+            <img src="s_09.png" alt="image 9">
+            <div class="overlay">
+                <a href="http://www.twepress.net/resources/report/item/360-report-122-2" target="_blank">
+                    <img src="web_icon.png" alt="web" class="web-icon">
+                </a>
+                <img src="enlarge_icon.png" alt="enlarge" class="enlarge-icon">
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // 獲取模態框
+        var modal = document.getElementById("modal");
+
+        // 獲取模態框中的圖片和描述
+        var modalImg = document.getElementById("modal-img");
+
+        // 獲取所有的 enlarge_icon 並添加點擊事件
+        var enlargeIcons = document.querySelectorAll('.enlarge-icon');
+        enlargeIcons.forEach(function(icon) {
+            icon.addEventListener('click', function() {
+                modal.style.display = "block";
+                modalImg.src = this.closest('.grid-item').querySelector('img').src;
+            });
+        });
+
+        // 點擊模態框背景可以關閉模態框
+        modal.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    
+    <footer>
+        <h3 style="margin-top: 30px;">Sung, Shun-Lyn's</h3>
+        <ul>
+            <li>
+                <h3>About</h3>
+                <p>Introductions</p>
+                <p>Expertise</p>
+                <p>Experience</p>
+            </li>
+
+            <li>
+                <h3>Story</h3>
+                <p>MRS Micro-Work</p>
+                <p>Fembooks</p>
+            </li>
+
+            <li>
+                <h3>Gallery</h3>
+            </li>
+
+            <li>
+                <h3>Link</h3>
+                <p><a href="https://www.twincn.com/item.aspx?no=28477785#google_vignette" target="_blank">MRS Micro-Work</a></p>
+                <p><a href="https://www.fembooks.com.tw/tc/index.aspx" target="_blank">Fembooks</a></p>
+                <p><a href="https://www.twist.org.tw/" target="_blank">TWiST</a></p>
+            </li>
+        </ul>
+        <p style="margin-top: 30px;"><small>©2024 Quentin Lai, Vivian Lin. All rights reserved.</small></p>
+    </footer>
+</body>
