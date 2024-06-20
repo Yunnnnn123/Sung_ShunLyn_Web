@@ -220,4 +220,17 @@ footer a{
     width: 35%;
 }
 
+/* image-container */
+.image-container .hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* 確保圖片大小和容器一致 */
+    opacity: 0; /* 初始設定為透明 */
+    transition: opacity 0.3s ease; /* 平滑過渡效果 */
+    pointer-events: none; /* 防止圖片攔截鼠標事件 */
+}
 
+.image-container:hover .hover-image {
+    opacity: 1; /* 滑鼠懸停時讓圖片顯現 */
+}
