@@ -1,8 +1,7 @@
 body {
     background-color: #FBFAF3;
-    font-family: monospace;
-    margin: 0;
-    padding: 0;
+    font-family:monospace;
+    margin: 0px;
 }
 
 nav {
@@ -80,82 +79,34 @@ nav ul {
 }
 
 
-.article-grid-item iframe {
-    width: 60%;
-    height: 70%; 
+article{
+    color: #00100B;
+    text-align: left;
+    margin-top: 120px;
+    margin-left: 800px;
 }
 
-.article-grid-item h1 {
-    font-size: 45px;
-    margin-bottom: 10px;
-    color: #CC7DB1;
+article ol {
+    list-style-type: none;
+    padding: 0;
+    margin-left: -600px;
+    text-align: left;
 }
 
-.article-grid-item h2 {
-    font-size: 16px;
+article ol li {
+    display: inline-block;
+    margin-right: 0px;
+    width: auto;
+    vertical-align: top;
 }
 
-.article-grid-item p {
-    margin-top: 10px;
-    line-height: 1.6;
+article h1{
+    font-size: 25px;
+    margin-bottom: 30px;
+    color: #CC7DB1
 }
 
-.article-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 20px;
-    margin: 0 50px;
-}
-
-.article-grid-item {
-    padding: 20px;
-}
-
-.highlighted-text {
-    background-color: white;
-    color: #51318F;
-    font-weight: bold;
-    padding: 30px;
-    margin-right: 336px;
-    font-size: 15px;
-    width: 198px;
-}
-
-.custom-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 两列布局，每列平分 */
-    grid-template-rows: repeat(3, 1fr); /* 三行布局，每行平分 */
-    gap: 20px;
-    margin: 0 50px;
-}
-
-
-.custom-grid-item {
-    padding: 20px;
-}
-
-.custom-grid-item h1 {
-    font-size: 45px;
-    margin-bottom: 10px;
-    color: #CC7DB1;
-}
-
-.custom-grid-item h2 {
-    font-size: 16px;
-}
-
-.custom-grid-item p {
-    margin-top: 10px;
-    line-height: 1.6;
-}
-
-.custom-grid-item ul{
-    margin-top: 50px;
-}
-
-.custom-grid-item ul li {
-    margin-top: 10px;
+article h2{
     font-size: 16px;
 }
 
@@ -203,6 +154,7 @@ footer div h3 {
     text-decoration: underline;
 }
 
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -247,8 +199,8 @@ footer div h3 {
     height: 40px;
     opacity: 0;
     transition: opacity 0.3s ease;
-    top: 5%;
-    left: 5%;
+    top: 20px;
+    left: 20px;
 }
 
 .grid-item .enlarge-icon {
@@ -257,8 +209,8 @@ footer div h3 {
     height: 40px;
     opacity: 0;
     transition: opacity 0.3s ease;
-    top: 80%;
-    left: 80%;
+    top: 260px;
+    left: 260px;
 }
 
 /* 當鼠標懸停在圖片上時，顯示覆蓋層和叉叉圖示 */
@@ -296,6 +248,21 @@ footer div h3 {
     width: 35%;
 }
 
+/* image-container */
+.image-container .hover-image {
+    position: absolute;
+    top: 10px;
+    left: 120px;
+    width: 100%; /* 確保圖片大小和容器一致 */
+    opacity: 0; /* 初始設定為透明 */
+    transition: opacity 0.3s ease; /* 平滑過渡效果 */
+    pointer-events: none; /* 防止圖片攔截鼠標事件 */
+}
+
+.image-container:hover .hover-image {
+    opacity: 1; /* 滑鼠懸停時讓圖片顯現 */
+}
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -329,22 +296,11 @@ footer div h3 {
     }
 }
 
+
 @media (max-width: 480px) {
 
     .footer-grid {
         grid-template-columns: 1fr;
-    }
-
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-
-    article h1 {
-        font-size: 20px;
-    }
-
-    article h2 {
-        font-size: 14px;
     }
 
     .nav-grid {
@@ -357,18 +313,5 @@ footer div h3 {
 
     .dropdown-content-1 {
         left: 38%;
-    }
-
-    .article-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .article-grid-item iframe {
-        width: 60%;
-        height: 40%; 
-    }
-
-    .custom-grid {
-        grid-template-columns: 1fr;
     }
 }

@@ -9,20 +9,31 @@
 
 <body>
     <nav>
-        <ul>
-            <li><img src="LOGO.png" style="width: 160px; margin-right: 580px;"></li>
-            <li><a href="" style="text-decoration: none;">About</a></li>
-            <li>Story
-                <div class="dropdown-content">
+        <ul class="nav-grid">
+            <li class="nav-logo"><img src="LOGO.png" alt="Logo"></li>
+            <li class="nav-item"></li>
+            <li class="nav-item"></li>
+            <li class="nav-item">
+                <a href="#">About</a>
+                <div class="dropdown-content-1">
+                    <a href="index.html">Intro</a>
+                    <a href="About_Expertise.html">Expertise</a>
+                    <a href="About_Experience.html">Experience</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="#">Story</a>
+                <div class="dropdown-content-2">
                     <a href="SungShunlyn_MRS.html">MRS Micro-Work Co., Ltd.</a>
                     <a href="SungShunlyn_Fem.html">Fembook</a>
                 </div>
             </li>
-            <li style="margin-right: 250px; color: #51318F; font-weight: bold;">
-                <a href="SungShunlyn_Gallery.html" style="text-decoration: none;">Gallery</a>
+            <li class="nav-item">
+                <a style="color: #51318F; font-weight: bold;" href="SungShunlyn_Gallery.html">Gallery</a>
             </li>
         </ul>
-    </nav>
+    </nav>    
+    
 
     <div class="grid-container" style="margin-top: 150px;">
         <div class="grid-item">
@@ -139,32 +150,29 @@
     </script>
     
     <footer>
-        <h3 style="margin-top: 30px;">Sung, Shun-Lyn's</h3>
-        <ul>
-            <li>
+        <div class="footer-grid">
+            <div class="footer-section">
                 <h3>About</h3>
                 <p>Introductions</p>
                 <p>Expertise</p>
                 <p>Experience</p>
-            </li>
-
-            <li>
+            </div>
+            <div class="footer-section">
                 <h3>Story</h3>
                 <p>MRS Micro-Work</p>
                 <p>Fembooks</p>
-            </li>
-
-            <li>
+            </div>
+            <div class="footer-section">
                 <h3>Gallery</h3>
-            </li>
-
-            <li>
+            </div>
+            <div class="footer-section">
                 <h3>Link</h3>
                 <p><a href="https://www.twincn.com/item.aspx?no=28477785#google_vignette" target="_blank">MRS Micro-Work</a></p>
                 <p><a href="https://www.fembooks.com.tw/tc/index.aspx" target="_blank">Fembooks</a></p>
                 <p><a href="https://www.twist.org.tw/" target="_blank">TWiST</a></p>
-            </li>
-        </ul>
-        <p style="margin-top: 30px;"><small>©2024 Quentin Lai, Vivian Lin. All rights reserved.</small></p>
+            </div>
+        </div>
+        <p><small>©2024 Quentin Lai, Vivian Lin. All rights reserved.</small></p>
     </footer>
+    
 </body>
